@@ -1,0 +1,374 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Loader */
+#slider-loader {
+    transition: opacity 0.3s ease;
+}
+
+#slider-loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Navbar */
+.nav-bg {
+    background: white;
+    transition: background 0.3s ease;
+}
+
+.nav-icon {
+    margin-right: 0.5rem;
+}
+
+/* Tipografía */
+.logo {
+    font-family: 'Lobster', cursive;
+    color: #ffffff;
+}
+
+.logo-vive {
+    color: #ffcf00;
+}
+
+.logo-talara {
+    color: #ff5c00;
+}
+
+.lobster-text {
+    font-family: 'Lobster', cursive;
+}
+
+.text-orange-900 {
+    color: #C2410C;
+}
+
+/* Botones CTA */
+.cta-button {
+    color: #ffffff;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para la sección Travel */
+#travel .fancy-text-1,
+#travel .fancy-text-2,
+#travel .fancy-text-3 {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #E5E7EB;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+#travel .fancy-text-1:hover,
+#travel .fancy-text-2:hover,
+#travel .fancy-text-3:hover {
+    transform: scale(1.03);
+    border: 2px solid #ff7526;
+}
+
+/* Estilos para el slider principal */
+.elegant-slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+}
+
+.elegant-slider .swiper-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.elegant-slider .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.elegant-slider .swiper-slide > div {
+    z-index: 2;
+}
+
+.elegant-title {
+    font-family: 'Lobster', cursive;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.elegant-subtitle {
+    font-family: 'Roboto', sans-serif;
+    color: #f3f4f6;
+}
+
+.elegant-cta {
+    font-family: 'Roboto', sans-serif;
+    background: #ff7526;
+    color: #ffffff;
+    border-radius: 50px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.elegant-cta:hover {
+    background: linear-gradient(to right, #ff7526, #ffcf00);
+    transform: scale(1.05);
+}
+
+.elegant-slider .swiper-pagination {
+    bottom: 30px;
+}
+
+.elegant-slider .swiper-pagination-bullet {
+    background: #ffffff;
+    opacity: 0.7;
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 0 6px;
+}
+
+.elegant-slider .swiper-pagination-bullet-active {
+    background: #ff7526;
+    opacity: 1;
+}
+
+/* Slider de Tienda (Personalizado) */
+.custom-slider {
+    width: 100%;
+    max-width: 1200px;
+    height: 720px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+}
+
+.custom-slider-wrapper {
+    display: flex;
+    width: 300%; /* 3 imágenes */
+    height: 100%;
+    animation: slide 6s infinite;
+}
+
+.custom-slide {
+    width: 33.33%; /* 1/3 del contenedor */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.custom-slide img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes slide {
+    0%, 33.33% {
+        transform: translateX(0);
+    }
+    33.34%, 66.66% {
+        transform: translateX(-33.33%);
+    }
+    66.67%, 100% {
+        transform: translateX(-66.66%);
+    }
+}
+
+.custom-pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.custom-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    opacity: 0.7;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.custom-pagination-bullet.active {
+    background: #ff7526;
+    opacity: 1;
+}
+
+/* Secciones */
+.section {
+    padding: 4rem 1rem;
+}
+
+#inicio {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#respaldo {
+    margin-top: 0;
+    padding-top: 2rem;
+}
+
+/* Temporizador */
+.countdown-section {
+    background: linear-gradient(to right, #ff5c00, #ffa100);
+}
+
+.countdown-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    min-width: 80px;
+    text-align: center;
+}
+
+.countdown-box span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.countdown-box p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Estilos VIP */
+.vip-title {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+.highlight-bg {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.border-gold {
+    border-color: #FFD700;
+}
+
+/* Footer */
+footer a:hover {
+    color: #f97316;
+}
+
+/* Estilos para imágenes en secciones de dos columnas */
+.section .grid img {
+    max-width: 100%;
+    width: 450px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.section .grid img:hover {
+    transform: scale(1.1);
+}
+
+/* Ajustes para las secciones de Favoritos y Promos */
+#favoritos img,
+#promos img {
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#favoritos img:hover,
+#promos img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 1024px) {
+    .custom-slider {
+        max-width: 100%;
+        height: 600px;
+    }
+
+    .elegant-slider {
+        height: 80vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .section .grid img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    #favoritos img,
+    #promos img {
+        max-width: 350px;
+    }
+
+    .custom-slider {
+        max-width: 100%;
+        height: 500px;
+    }
+
+    #travel .fancy-text-1,
+    #travel .fancy-text-2,
+    #travel .fancy-text-3 {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    #travel .fancy-text-1 svg,
+    #travel .fancy-text-2 svg,
+    #travel .fancy-text-3 svg {
+        transform: scale(0.8);
+    }
+
+    .elegant-slider {
+        height: 80vh;
+    }
+
+    .elegant-title {
+        font-size: 2.5rem;
+    }
+
+    .elegant-subtitle {
+        font-size: 1rem;
+    }
+
+    .elegant-slider .swiper-pagination {
+        bottom: 20px;
+    }
+}
